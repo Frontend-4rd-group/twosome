@@ -185,3 +185,27 @@ footer {
     justify-content: right;
     margin-top: calc(var(--margin)*1.5);
 }
+
+
+#page1{
+}
+
+#page2{
+    background: url(./assets/img/page-1.jpg) no-repeat center;
+}
+
+#page3{
+    background: url(./assets/img/page-1.jpg) no-repeat center;
+}
+
+#page4{
+    background: url(./assets/img/page-1.jpg) no-repeat center;
+}
+
+#page5{
+    background: url(./assets/img/page-1.jpg) no-repeat center;
+}
+
+#page6{
+    background: url(./assets/img/page-1.jpg) no-repeat center;
+}
