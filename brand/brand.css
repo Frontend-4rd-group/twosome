@@ -1,82 +1,9 @@
-:root {
-    /* COLOR */
-    --white-color: white;
-    --black-color: #333333;
-
-    /* SIZE */
-    --padding: 12px;
-    --margin: 20px;
-
-    /* FONT-SIZE */
-    --font-big: 24px;
-    --font-large: 18px;
-    --font-medium: 14px;
-    --font-small: 12px;
-    --font-micro: 10px;
-}
-@font-face {
-    font-family: Noto-Sans;
-    src: url(../Noto_Sans_KR/NotoSansKR-Regular.otf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Noto-Sans;
-}
-/* HEADER */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 calc(var(--margin) * 2);
-    position: fixed;
-    top: calc(var(--margin) * 1.5);
-    align-items: center;
-    font-weight: bold;
-}
-
-header > #nav {
-    list-style: none;
-    display: flex;
-    font-weight: bold;
-    margin-right: calc(var(--margin) * 9);
-    margin-left: calc(var(--margin) * 3);
-}
-
-header > #nav > li {
-    margin: 0 calc(var(--margin) * 2);
-    font-size: var(--font-large);
-}
-
-#logo {
-    margin-left: calc(var(--margin) * 2);
-}
-
-#logo > div:nth-of-type(1) {
-    font-size: var(--font-large);
-    letter-spacing: 1px;
-}
-
-#logo > div:nth-of-type(2) {
-    text-align: center;
-    font-size: var(--font-medium);
-}
-
-#menu_btn {
-    font-size: calc(var(--font-large) * 1.5);
-    margin-right: calc(var(--margin) * 2);
-}
-
-/* SECTION */
-
-#wrapper {
+SECTION #section {
     width: 65vw;
     margin: 0 auto;
     margin-top: 190px;
+    z-index: 1;
 }
-
 #intro-top > span {
     color: #777777;
     font-size: var(--font-medium);
@@ -93,12 +20,34 @@ header > #nav > li {
 #intro-top > span:last-child::after {
     content: "";
 }
-
+.section_contents_display {
+    display: flex;
+    justify-content: center;
+}
 h1 {
     font-size: 70px;
-    margin-top: 70px;
+    margin: 70px 0;
 }
-
+h6 {
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+}
+img {
+    width: 1200px;
+    position: relative;
+}
+h2 {
+    margin: 70px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
 #content1 {
     margin-top: 70px;
     display: flex;
@@ -182,17 +131,12 @@ h1 {
     font-size: 44px;
 }
 
-p {
-    font-size: 44px;
-    font-weight: bold;
-    margin-top: 100px;
-}
-
 #content3 {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
 }
+
 #content3 > div {
     height: 300px;
     width: 400px;
@@ -202,39 +146,88 @@ p {
     justify-content: center;
     align-items: center;
 }
-
-/* 이자리에 아이콘 */
-
-#content3 > div > div:nth-of-type(2) {
-    color: #d50037;
-    font-weight: bold;
-    margin: 15px 0;
-    font-size: 18px;
+#intro-top > span > a {
+    color: red;
 }
 
-#content3 > div > div:nth-of-type(3) {
-    font-weight: bold;
-    font-size: 24px;
+/* header Footer */
+:root {
+    /* COLOR */
+    --white-color: white;
+    --black-color: #333333;
+
+    /* SIZE */
+    --padding: 12px;
+    --margin: 20px;
+
+    /* FONT-SIZE */
+    --font-big: 24px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+@font-face {
+    font-family: Noto-Sans;
+    src: url(../Noto_Sans_KR/NotoSansKR-Regular.otf);
 }
 
-#content4 {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Noto-Sans;
+    text-decoration: none;
+}
+header a {
+    color: black;
+}
+footer a {
+    color: white;
+}
+/* HEADER */
+
+header {
     display: flex;
-    margin-top: 25px;
-}
-
-#content4 > div {
-    border: 1px solid #d6d6d6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 calc(var(--margin) * 2);
+    position: fixed;
+    top: calc(var(--margin) * 1.5);
     align-items: center;
-    width: 250px;
-    height: 250px;
+    font-weight: bold;
+    z-index: 100;
 }
 
-#content4 > div > div:last-of-type {
+header > #nav {
+    list-style: none;
+    display: flex;
     font-weight: bold;
-    font-size: 24px;
+    margin-right: calc(var(--margin) * 9);
+    margin-left: calc(var(--margin) * 3);
+}
+
+header > #nav > li {
+    margin: 0 calc(var(--margin) * 2);
+    font-size: var(--font-large);
+}
+
+#logo {
+    margin-left: calc(var(--margin) * 2);
+}
+
+#logo > a > div:nth-of-type(1) {
+    font-size: var(--font-large);
+    letter-spacing: 1px;
+}
+
+#logo > a > div:nth-of-type(2) {
+    text-align: center;
+    font-size: var(--font-medium);
+}
+
+#menu_btn {
+    font-size: calc(var(--font-large) * 1.5);
+    margin-right: calc(var(--margin) * 2);
 }
 /* footer */
 footer {
@@ -284,7 +277,9 @@ footer {
     font-size: var(--font-medium);
     color: #777777;
 }
-
+footer a:hover {
+    border-bottom: 2px solid white;
+}
 #footer2 {
     width: 65%;
     margin: 0 auto;
@@ -304,7 +299,7 @@ footer {
     font-size: var(--font-medium);
 }
 
-#footer2 > ul:first-child > li:nth-of-type(2) {
+#footer2 > ul:first-child > li:nth-of-type(2) > a {
     color: #f5ce3e;
 }
 
